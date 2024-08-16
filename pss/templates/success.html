@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Success
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading" style="color: blue; font-weight: bold; text-align: center;">Registration Successful!</h4>
+                    <p style="color: rgb(131, 15, 240);">Thank you for registering with Panyango SS OBS and OGS Association. We welcome you,
+                        <h1 style="color: green; font-family: serif; font-weight: bold; text-transform: uppercase; font-size: 20px; text-align: center;">{{ registration.name }}</h1>
+                    </p>
+                    <hr style="color: red;">
+                    <p class="mb-0" style="color: maroon;">You can also join our social media groups below to interact with others. Thank you!</p>
+                </div>
+                <div class="d-flex justify-content-center mt-5">
+                    <a href="{% url 'register' %}" class="btn btn-outline-success mx-5" style="font-weight: bold;">Back</a>
+                    <a href="https://chat.whatsapp.com/ItBK2DdaySz8qVdDXUPsy1" target="_blank" class="btn btn-outline-success mx-2" style="font-weight: bold;">
+                        WhatsApp Group
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}

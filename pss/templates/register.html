@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filters %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <title>
+        {% block title %}
+        Register
+        {% endblock %}
+    </title>
+
+
+{% block content %}
+
+<script>
+        function setMembershipFee() {
+            var membershipType = document.getElementById('id_membership_type').value;
+            var membershipFeeField = document.getElementById('id_membership_fee');
+            var membershipFees = {
+                'Ordinary': 5000,
+                'Premium': 10000,
+                'Vip': 15000,
+                'Gold': 20000
+            };
+
+            if (membershipType in membershipFees) {
+                membershipFeeField.value = membershipFees[membershipType];
+            } else {
+                membershipFeeField.value = '';
+            }
+        }
+
+        window.onload = function() {
+            document.getElementById('id_membership_type').addEventListener('change', setMembershipFee);
+            setMembershipFee();  // Set initial value
+        };
+    </script>
+
+<div style="background-color: linen">
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card" style="background-color:antiquewhite;">
+                <div class="card-header" style="background-color: maroon;">
+                    <h2 style="color: orange; text-align: center;">Membership Registration Form</h2>
+                </div>
+                <div class="card-body">
+<form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+    {% csrf_token %}
+    {% if form.errors %}
+        <div class="alert alert-danger">
+            <strong>There was an error with your submission. Please check the form below and correct any errors.</strong>
+        </div>
+    {% endif %}
+    <div class="form-group">
+        <label for="image">Upload Image:</label>
+        {{ form.image|add_class:"form-control"}}
+        {% if form.image.errors %}
+            <div class="text-danger">
+                {{ form.image.errors }}
+            </div>
+        {% endif %}
+    </div>
+    <div class="form-group" style="color: rgb(131, 15, 240); font-weight: bold; font-size: 15px;">
+        {{ form.name.label_tag }}
+        {{ form.name|add_class:"form-control" }}
+        {% if form.name.errors %}
+            <div class="text-danger">
+                {{ form.name.errors }}
+            </div>
+        {% endif %}
+    </div>
+    <div class="form-group" style="color: rgb(131, 15, 240); font-weight: bold; font-size: 15px; margin-top: 25px;">
+        {{ form.membership_type.label_tag }}
+        {{ form.membership_type|add_class:"form-control" }}
+        {% if form.membership_type.errors %}
+            <div class="text-danger">
+                {{ form.membership_type.errors }}
+            </div>
+        {% endif %}
+    </div>
+    <div class="form-group" style="color: rgb(131, 15, 240); font-weight: bold; font-size: 15px; margin-top: 25px;">
+        {{ form.address.label_tag }}
+        {{ form.address|add_class:"form-control" }}
+        {% if form.address.errors %}
+            <div class="text-danger">
+                {{ form.address.errors }}
+            </div>
+        {% endif %}
+    </div>
+    <div class="form-group" style="color: rgb(131, 15, 240); font-weight: bold; font-size: 15px; margin-top: 25px;">
+        {{ form.date_of_birth.label_tag }}
+        {{ form.date_of_birth|add_class:"form-control" }}
+        {% if form.date_of_birth.errors %}
+            <div class="text-danger">
+                {{ form.date_of_birth.errors }}
+            </div>
+        {% endif %}
+    </div>
+    <div class="form-group" style="color: rgb(131, 15, 240); font-weight: bold; font-size: 15px; margin-top: 25px;">
+        {{ form.phone_number.label_tag }}
+        {{ form.phone_number|add_class:"form-control" }}
+        {% if form.phone_number.errors %}
+            <div class="text-danger">
+                {{ form.phone_number.errors }}
+            </div>
+        {% endif %}
+    </div>
+    <div class="form-group" style="color: rgb(131, 15, 240); font-weight: bold; font-size: 15px; margin-top: 25px;">
+        {{ form.email.label_tag }}
+        {{ form.email|add_class:"form-control" }}
+        {% if form.email.errors %}
+            <div class="text-danger">
+                {{ form.email.errors }}
+            </div>
+        {% endif %}
+    </div>
+    <div class="form-group" style="color: rgb(131, 15, 240); font-weight: bold; font-size: 15px; margin-top: 25px;">
+        {{ form.year_at_panyango.label_tag }}
+        {{ form.year_at_panyango|add_class:"form-control" }}
+        {% if form.year_at_panyango.errors %}
+            <div class="text-danger">
+                {{ form.year_at_panyango.errors }}
+            </div>
+        {% endif %}
+    </div>
+    <div class="form-group" style="color: rgb(131, 15, 240); font-weight: bold; font-size: 15px; margin-top: 25px;">
+        {{ form.occupation.label_tag }}
+        {{ form.occupation|add_class:"form-control" }}
+        {% if form.occupation.errors %}
+            <div class="text-danger">
+                {{ form.occupation.errors }}
+            </div>
+        {% endif %}
+    </div>
+    <div class="form-group" style="color: rgb(131, 15, 240); font-weight: bold; font-size: 15px; margin-top: 25px;">
+        {{ form.membership_fee.label_tag }}
+        {{ form.membership_fee|add_class:"form-control" }}
+        {% if form.membership_fee.errors %}
+            <div class="text-danger">
+                {{ form.membership_fee.errors }}
+            </div>
+        {% endif %}
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+        <a href="{% url 'home' %}">
+          <button type="button" class="btn btn-outline-danger">Exit</button>
+        </a>
+      </div>
+      
+    
+    
+</form>
+</div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section>
+    <!-----footer-->
+    <div class="footer" style="padding: 20px;">
+        <div class="innerfooter" style="padding: 20px; background: maroon; color: #fff;">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="fbox" style="border-right: 1px solid #fff;">
+                        <h1 style="font-size: 20px; color: orange">The School's Administration</h1>
+                        <ul style="color: rgb(26, 218, 231);">
+                            <li>Headteacher: Rev.Fr.Charles Ohuru</li>
+                            <li>Deputy Headteacher:</li>
+                            <li>Director of Studies</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fbox" style="border-right: 1px solid #fff;">
+                     <h1 style="font-size: 20px; color: orange;">OB'S & OG'S Executives</h1></u>
+                        <ul style="color: rgb(26, 218, 231);">
+                         <li>ChairPerson: Mr Openjmungu Philliam</li>
+                         <li>Vice ChairPerson: Ms Yonikane Sharon</li>
+                        <li>General Secretary: Mr Mungu Jakisha Brian</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fbox" style="border-right: 1px solid #fff;">
+                    <h1 style="font-size: 20px; color: orange;">Website Developer</h1>
+                     <h1 style="font-size: 15px; color: rgb(26, 218, 231);;"><img src="{% static 'whatsap.jpg' %}" class="img-fluid rounded-start" alt="whatsap" style="width: 15px; height: 15px;">+256 780148847</h1>
+                    <h1 style="font-size: 15px; color: rgb(26, 218, 231);;"><img src="{% static 'call.jpg' %}" class="img-fluid rounded-start" alt="call" style="width: 15px; height: 15px;">+256 763764365/+256 707383183</h1>
+                    <h1 style="font-size: 15px; color: rgb(26, 218, 231);;"><img src="{% static 'email.jpg' %}" class="img-fluid rounded-start" alt="email" style="width: 15px; height: 15px;">rwothongeojulius052@gmail.com</h1>
+                </div>
+
+
+            </div>
+
+         </div>
+
+     </div>
+
+ </div>
+</section>
+{% endblock %}

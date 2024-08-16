@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <title>
+        {% block title %}
+        Home
+        {% endblock %}
+    </title>
+</head>
+<body>
+    
+</body>
+</html>
+
+{% block content %}
+
+<section>
+<div class="banner">
+    <div class="text-center">
+        <img src="{% static 'logo.jpeg' %}" class="rounded" alt="logo" width="100px" height="100px" style="margin-top: 50px;">
+     
+      <div class="inner">
+        <h1 style="color: #FFF; font-family: serif; font-weight: bold; margin-top: 5%; text-align: center; color: orange;">PANYANGO SS OB'S AND OG'S ASSOCIATION</h1>
+        <p style="color: rgb(26, 218, 231); text-align: center;">Panyango ss village, Pamitu Parish, Panyango SubCounty, Pakwach District. P.O.Box 102, Pakwach</p>
+        <div class=" bg- p-5" style=" width: 60%; margin-left: auto; margin-right: auto;">
+            
+            <!-- <h5 style="color: #FFF; font-family: serif; font-weight: bold; margin-top: 5%; text-align: center;">ENTER REG NUMBER TO TRACK YOUR RESEARCH PROGRESS</h5> -->
+            <a class="btn btn-primary" href="{% url 'about' %}" role="button">Visit Us To Know More</a>
+           
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <!-----contents-->
+    <div class="container">
+        <h3 style="color: #FFF; font-family: Arial, Helvetica, sans-serif; font-weight: bold; margin-top: 5%; text-align: center; font-size: 35px; color: blue;">Our Former School</h3>
+        <p style="color: orangered; text-align: center; text-align: justify;">Panyango Secondary School is a Ugandan Secondary School in Pakwach District, Panyango ss village, Pamitu Parish, Panyango SubCounty,Pakwach District. P.O.Box 102, Pakwach. It is registered as Government Aided School, by the Ministry of Education and Sports(MoES). The school has good amenities/facilities such as, Classrooms, Laboratories, Libraries, Toilet accessible for both Students and Staffs</p>
+    </div>
+
+    <div class="row m-5">
+        <div class="col-md-5">
+            <div class="circle" style="padding: 10px;">
+                <img src="{% static '2018.webp' %}" class="img-fluid" style="border-radius: 10px; box-shadow: 0px 0px 10px 0px maroon; margin-top: 50px;">
+
+            </div>
+            </div>
+            <div class="col-md-7" >
+                <h4 style="font-weight: bold; color: maroon;">GAMES & SPORTS COMPETITION</h4>
+                <hr style="background: maroon;">
+                <P style="text-align: justify;">Panyango Secondary School, known for its commitment to both academic and extracurricular excellence, offers a vibrant sports program that encourages student participation, teamwork, and physical fitness. 
+                    <br><br> The school’s football team is well-regarded, participating in various inter-school competitions and tournaments.Volleyball is another key sport, featuring both boys' and girls' teams.Track and field events are a highlight, with students participating in sprints, long-distance running, and field events like javelin and shot put.
+                    <br><br>The girls' netball team has a strong presence in regional competitions.The school’s commitment to fostering a balanced education, where sports play a significant role, is evident in its recent achievements and the enthusiastic participation of its students.</P>
+            
+        </div>
+
+        <div class="col-md-5">
+            <div class="circle" style="padding: 10px;">
+                <img src="{% static 'sch.jpg' %}" class="img-fluid" style="border-radius: 10px; box-shadow: 0px 0px 10px 0px maroon; margin-top: 70px;">
+
+            </div>
+            </div>
+            <div class="col-md-7" style="margin-top: 20px;">
+                <h4 style="font-weight: bold; color: maroon;">ACCADEMIC PERFORMANCE</h4>
+                <hr style="background: maroon;">
+                <p style="text-align: justify;">Panyango SS consistently achieves strong results in national exams, with a high percentage of students passing and qualifying for further education. The school excels in various subjects, with particularly strong performance in Mathematics, Sciences, and English.<br><br> The school boasts a team of experienced and dedicated teachers, many with advanced degrees and specializations.
+                 Panyango SS offers a broad curriculum that includes core subjects as well as electives in arts, humanities, and vocational studies.
+            <br><br>  A well-stocked library provides students with access to a vast array of books, journals, and digital resources. Modern science laboratories equipped with up-to-date equipment facilitate hands-on learning and experimentation.</p>
+      </div>
+         <div class="col-md-5">
+          <div class="circle" style="padding: 20px;">
+             <img src="{% static 'CUP.jpeg' %}" class="img-fluid" style="border-radius: 10px; box-shadow: 0px 0px 10px 0px maroon; margin-top: 60px;">
+    
+       </div>
+    </div>
+    <div class="col-md-7" style="margin-top: 20px;">
+        <h4 style="font-weight: bold; color: maroon;">THE SCHOOL'S SUCCESS</h4>
+        <hr style="background: maroon;">
+        <p style="text-align: justify;">Panyango Secondary School has demonstrated remarkable success in various areas, reflecting its dedication to holistic education and student development. The school has consistently achieved high pass rates in national examinations, with many students earning top grades.
+            <br><br>Numerous students have been awarded scholarships for higher education, both within the country and internationally, due to their outstanding academic performance.
+            The school’s sports teams have won multiple district and regional championships in football, basketball, volleyball, and athletics.
+            <br><br>The drama and debate clubs have earned accolades in inter-school competitions, showcasing the students' talents and creativity.
+            Recent infrastructure developments include the construction of new classrooms, state-of-the-art science laboratories, and a well-equipped library.
+            Several teachers have been honored with awards for their dedication and impact on student success.
+        </p>
+    </div>
+</div>
+        
+</section>
+
+<section>
+    <!-----footer-->
+    <div class="footer" style="padding: 20px;">
+        <div class="innerfooter" style="padding: 20px; background: maroon; color: #fff;">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="fbox" style="border-right: 1px solid #fff;">
+                        <h1 style="font-size: 20px; color: orange">The School's Administration</h1>
+                        <ul style="color: rgb(26, 218, 231);">
+                            <li>Headteacher: Rev.Fr.Charles Ohuru</li>
+                            <li>Deputy Headteacher:</li>
+                            <li>Director of Studies</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fbox" style="border-right: 1px solid #fff;">
+                     <h1 style="font-size: 20px; color: orange;">OB'S & OG'S Executives</h1></u>
+                        <ul style="color: rgb(26, 218, 231);">
+                         <li>ChairPerson: Mr Openjmungu Philliam</li>
+                         <li>Vice ChairPerson: Ms Yonikane Sharon</li>
+                        <li>General Secretary: Mr Mungu Jakisha Brian</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fbox" style="border-right: 1px solid #fff;">
+                    <h1 style="font-size: 20px; color: orange;">Website Developer</h1>
+                     <h1 style="font-size: 15px; color: rgb(26, 218, 231);;"><img src="{% static 'whatsap.jpg' %}" class="img-fluid rounded-start" alt="whatsap" style="width: 15px; height: 15px;">+256 780148847</h1>
+                    <h1 style="font-size: 15px; color: rgb(26, 218, 231);;"><img src="{% static 'call.jpg' %}" class="img-fluid rounded-start" alt="call" style="width: 15px; height: 15px;">+256 763764365/+256 707383183</h1>
+                    <h1 style="font-size: 15px; color: rgb(26, 218, 231);;"><img src="{% static 'email.jpg' %}" class="img-fluid rounded-start" alt="email" style="width: 15px; height: 15px;">rwothongeojulius052@gmail.com</h1>
+                </div>
+
+
+            </div>
+
+         </div>
+
+     </div>
+
+ </div>
+</section>
+
+{% endblock %}

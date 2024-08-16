@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'bootsrap.min.css' %}">
+    <title>
+        {% block title %}
+        About Us
+        {% endblock %}    
+    </title>
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+        <h3 style="color: #FFF; font-family: Arial, Helvetica, sans-serif; font-weight: bold; margin-top: 5%; text-align: center; font-size: 35px; color: blue;">About Us</h3>
+        <p style="text-align: center; text-align: justify; color: orangered;">The Panyango Secondary School Old Boys' and Old Girls' Association is an alumni organization formed by former students of Panyango Secondary School. The association aims to foster a sense of community among alumni, promote the welfare of the school, and support current students through various initiatives. Here’s a detailed look at the association:</p>
+        <div class="col-md-25" >
+            <h4 style="font-weight: bold; color: maroon;">Objectives and Mission</h4>
+            <ul style="text-align: justify;">
+                <li>Networking and Community Building: The association provides a platform for former students to reconnect, network, and build lasting relationships.</li>
+                <li>Support for Current Students: Through mentorship programs, scholarships, and donations, the association supports the academic and personal development of current students.</li>
+                <li>School Development: Alumni contribute to the development of the school by funding infrastructure projects, providing educational resources, and participating in school events.</li>
+                <li>Preserving Traditions: The association helps to preserve the school’s history and traditions, ensuring that the legacy of Panyango Secondary School continues.</li>
+
+            </ul>
+            <h4 style="font-weight: bold; color: maroon;">Activities and Initiatives</h4>
+            <ul style="text-align: justify;">
+                <li>Reunions and Events: Regular reunions and social events are organized to bring alumni together. These events offer opportunities for networking, reminiscing, and discussing ways to support the school.</li>
+                <li>Scholarships and Financial Aid: The association raises funds to provide scholarships and financial aid to deserving students, helping to ease the financial burden on families and encourage academic excellence.</li>
+                <li>Mentorship Programs: Alumni volunteers mentor current students, offering guidance on academic and career choices, and helping them navigate challenges both in school and in their future careers.</li>
+                <li>Fundraising Campaigns: Various fundraising campaigns are conducted to support school projects, such as building new classrooms, renovating facilities, and purchasing educational materials.</li>
+                <li>Community Service: Members of the association engage in community service projects, promoting a spirit of giving back and making a positive impact on the broader community.</li>
+
+            </ul>
+            <h4 style="font-weight: bold; color: maroon;">Membership</h4>
+            <ul style="text-align: justify;">
+                <li>Eligibility: Membership is open to all former students of Panyango Secondary School. There are different membership levels, including regular members, life members, and honorary members.</li>
+                <li>Benefits: Members enjoy benefits such as networking opportunities, access to exclusive events, and the chance to contribute to the growth and development of the school.</li>
+            </ul>
+            <h4 style="font-weight: bold; color: maroon;">How to Join</h4>
+            <ul style="text-align: justify;">
+                <li>Registration: Interested alumni can register by filling out a membership form available on the association’s website or at school events.</li>
+                <li>Membership Fees: There may be a nominal fee to join, which helps fund the association’s activities and initiatives.</li>
+
+            </ul> 
+            <h4 style="font-weight: bold; color: maroon;">Communication and Outreach</h4>
+            <ul style="text-align: justify;">
+                <li>Website and Social Media: The association maintains an online presence through its website and social media platforms, keeping members informed about upcoming events, news, and opportunities to get involved.</li>
+                <li>Newsletters: Regular newsletters are sent out to members, providing updates on the association’s activities, achievements, and plans.</li>
+
+            </ul> 
+            <h4 style="font-weight: bold; color: maroon;">Impact and Achievements</h4>
+            <ul style="text-align: justify;">
+                <li>Student Success: Many students have benefited from scholarships and mentorship programs, going on to achieve great success in their academic and professional lives.</li>
+                <li>School Improvements: Fundraising efforts have led to significant improvements in the school’s infrastructure and resources, enhancing the learning environment for current students.</li>
+                <li>Alumni Network: The association has built a strong network of alumni who support each other personally and professionally, creating a vibrant and engaged community.</li>
+
+            </ul>  
+        </div>
+      </div>
+      <section>
+        <!-----footer-->
+        <div class="footer" style="padding: 20px;">
+            <div class="innerfooter" style="padding: 20px; background: maroon; color: #fff;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="fbox" style="border-right: 1px solid #fff;">
+                            <h1 style="font-size: 20px; color: orange">The School's Administration</h1>
+                            <ul style="color: rgb(26, 218, 231);">
+                                <li>Headteacher: Rev.Fr.Charles Ohuru</li>
+                                <li>Deputy Headteacher:</li>
+                                <li>Director of Studies</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="fbox" style="border-right: 1px solid #fff;">
+                         <h1 style="font-size: 20px; color: orange;">OB'S & OG'S Executives</h1></u>
+                            <ul style="color: rgb(26, 218, 231);">
+                             <li>ChairPerson: Mr Openjmungu Philliam</li>
+                             <li>Vice ChairPerson: Ms Yonikane Sharon</li>
+                            <li>General Secretary: Mr Mungu Jakisha Brian</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="fbox" style="border-right: 1px solid #fff;">
+                         <h1 style="font-size: 20px; color: orange;">Website Developer</h1></u>
+                            <ul style="color: rgb(26, 218, 231);">
+                             <li>Whatsapp: +256 780148847</li>
+                             <li>Contact: +256 763764365/+256 707383183</li>
+                            <li>Email: rwothongeojulius052@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+             </div>
+    
+         </div>
+    
+     </div>
+    </section>
+    {% endblock %}
+    
+</body>
+</html>
