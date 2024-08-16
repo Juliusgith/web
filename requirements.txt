@@ -2,4 +2,5 @@ Django==3.2
 requests==2.26.0
 celery==5.2.7
 pillow==9.4
-django-forest==1.0.2
+django-forest==0.1.1
+
