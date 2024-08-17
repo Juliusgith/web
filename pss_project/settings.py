@@ -140,12 +140,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, '/media/')
 
 # settings.py
 
-# Celery Configuration Options
-CELERY_BROKER_URL = 'redis://localhost:6379/0'  # Example using Redis as the message broker
-CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
-
-
-# settings.py
 
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
